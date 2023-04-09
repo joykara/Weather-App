@@ -1,4 +1,4 @@
-const apiKey = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=53d1da66f8f7838016bdd48fd7c1ca6e";
+const apiKey = '53d1da66f8f7838016bdd48fd7c1ca6e';
 //uses the OpenWeatherMap API
 
 const searchBtn = document.querySelector("button");
@@ -9,7 +9,7 @@ const conditionsEl = document.querySelector(".conditions");
 const humidityEl = document.querySelector(".humidity");
 const windSpeedEl = document.querySelector(".wind-speed");
 
-searchBtn.addEventListener("click", getWeather);
+searchBtn.onclick = getWeather;
 
 function getWeather() {
   const location = searchInput.value;
