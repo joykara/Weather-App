@@ -1,0 +1,47 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input[type=text] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  width: 50%;
+}
+
+button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.weather-container {
+  margin-top: 50px;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location, .temperature, .conditions, .humidity, .wind-speed {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
