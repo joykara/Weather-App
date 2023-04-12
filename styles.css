@@ -9,7 +9,6 @@ h1 {
   text-align: center;
   color: #333;
   justify-content: center;
-  height: 100px;
   font-family: 'Alkatra';
   font-size: 80px;
 }
@@ -67,4 +66,12 @@ button:hover{
   color: red;
   margin-top: 20px;
   display: none;
+}
+@media screen and (max-width: 400px){
+  .search-container{
+    margin-top: 10px;
+  }
+  h1{
+    font-size: 40px;
+  }
 }
