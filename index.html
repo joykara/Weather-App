@@ -4,33 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://kit.fontawesome.com/12c7aa1406.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Weather App</title>
 </head>
 
 <body>
+  <div class="container">
     <h1>Weather App</h1>
-
+    <!-- weather search bar -->
     <div class="search-container">
-      <input type="text" placeholder="Enter location">
-      <button>Search</button>
+      <input type="text" placeholder="Enter location" class="weather-search-form">
+      <i id="search" class="fa-solid fa-magnifying-glass"></i>
     </div>
 
+    <!-- weather details -->
     <div class="weather-container">
-      <h2>Current Weather</h2>
 
-      <div class="weather-info">
-        <p class="location">Location: </p>
-        <p class="temperature">Temperature: </p>
-        <p class="conditions">Conditions: </p>
-        <p class="humidity">Humidity: </p>
-        <p class="wind-speed">Wind Speed: </p>
-      </div>
+      <section class="weather-info">
+        <div class="weather-location">
+          <h3 class="location">Location Name</h3>
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div class="weather-datetime">
+          <p class="daytime">Monday 22 May 2023 10:52AM</p>
+        </div>
+
+        <div class="weather-icon">
+          <!-- get openweathermap img -->
+          <img id="weather-icon" src="https://openweathermap.org/img/wn/04d.png" alt="weather icon">
+        </div>
+
+        <div class="weather-condition">
+          <p class="conditions">Cloudy</p>
+        </div>
+
+        <div class="temperature">
+          <i class="fa-solid fa-temperature-half"></i>
+          <p class="temperature-value">0&#176;C</p>
+        </div>
+        
+        <div class="weather-minmax">
+          <div class="min">
+            <p class="min-value">Min: 0&#176;C</p>
+          </div>
+          <div class="max">
+            <p class="max-value">Max: 0&#176;C</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="weather-details">
+        <div class="weather-details-item">
+          <div class="icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <p class="weather-details-title">Longitude & Latitude</p>
+            <p class="weather-details-value" id="coordinates">22&#176;C</p>
+          </div>
+        </div>
+
+        <div class="weather-details-item">
+          <div class="icon">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <div>
+            <p class="weather-details-title">Humidity</p>
+            <p class="weather-details-value" id="humidity">50%</p>
+          </div>
+        </div>
+
+        <div class="weather-details-item">
+          <div class="icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <div>
+            <p class="weather-details-title">Visibility</p>
+            <p class="weather-details-value" id="visibility">0</p>
+          </div>
+        </div>
+
+        <div class="weather-details-item">
+          <div class="icon">
+            <i class="fa-solid fa-cloud-rain"></i>
+          </div>
+          <div>
+            <p class="weather-details-title">Rainfall</p>
+            <p class="weather-details-value" id="rain">0</p>
+          </div>
+        </div>
+
+        <div class="weather-details-item">
+          <div class="icon">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <div>
+            <p class="weather-details-title">Wind Speed</p>
+            <p class="weather-details-value" id="wind-speed">0 m/s</p>
+          </div>
+        </div>
+
+        <div class="weather-details-item">
+          <div class="icon">
+            <i class="fa-solid fa-temperature-half"></i>
+          </div>
+          <div>
+            <p class="weather-details-title">Pressure</p>
+            <p class="weather-details-value" id="pressure">0 hPa</p>
+          </div>
+      </section>
 
     </div>
     <div id="error-message"></div>
 
+  </div>
+    
     <script src="script.js"></script>
 </body>
 
