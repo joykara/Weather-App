@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(90deg, rgb(222, 221, 221) 0%, rgb(250, 228, 208) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgb(217, 221, 221) 0%, rgb(250, 228, 208) 35%, rgba(0,212,255,1) 100%);
   font-family: Arial, sans-serif;
 }
 
