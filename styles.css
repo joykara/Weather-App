@@ -55,6 +55,8 @@ input[type=text] {
   font-family: 'Alkatra', cursive;
   text-align: left;
 }
+
+/* WEATHER-INFO */
 .weather-info {
   display: flex;
   flex-direction: column;
@@ -98,10 +100,7 @@ input[type=text] {
     margin-right: 15px;
 }
 
-/* .location, .temperature, .conditions, .humidity, .wind-speed {
-  font-size: 30px;
-  margin-bottom: 10px;
-} */
+/* WEATHER-DETAILS */
 .weather-details{
     display: flex;
     flex-wrap: wrap;

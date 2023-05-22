@@ -13,13 +13,13 @@ const conditionsEl = document.querySelector(".conditions");
 const coordinatesEl = document.querySelector("#coordinates");
 const humidityEl = document.querySelector("#humidity");
 const visibilityEl = document.querySelector("#visibility");
-// rain element
 const rainEl = document.querySelector("#rain");
 const pressureEl = document.querySelector("#pressure");
 const windSpeedEl = document.querySelector("#wind-speed");
 
 searchBtn.onclick = getWeather;
 
+// get weather function
 function getWeather() {
   const location = searchInput.value;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
