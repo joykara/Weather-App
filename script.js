@@ -19,6 +19,30 @@ const windSpeedEl = document.querySelector("#wind-speed");
 
 searchBtn.onclick = getWeather;
 
+//get day and time in 'Monday 22 May 2023 10:52AM' format from API for daytimeEl
+
+function getDayTime() {
+  const now = new Date();
+
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const day = days[now.getDay()];
+  const date = now.getDate();
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+    "October", "November", "December"];
+
+  const month = months[now.getMonth()];
+  const year = now.getFullYear();
+  let hour = now.getHours();
+  let minute = now.getMinutes();
+  const ampm = hour >= 12 ? 'PM' : 'AM';
+  hour = hour % 12;
+  hour = hour ? hour : 12;
+  minute = minute < 10 ? '0' + minute : minute;
+  let time = `${day} ${date} ${month} ${year} ${hour}:${minute}${ampm}`;
+  return time;
+}
+
+
 // get weather function
 function getWeather() {
   const location = searchInput.value;
@@ -30,6 +54,7 @@ function getWeather() {
     .then(data => {
       console.log(data);
       locationEl.textContent = ` ${data.name}, ${data.sys.country}`;
+      daytimeEl.textContent = getDayTime();
       temperatureEl.textContent = ` ${(data.main.temp - 273.15).toFixed(1)}°C`;
       weatherIcon.src = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
       conditionsEl.textContent = ` ${data.weather[0].description}`;
